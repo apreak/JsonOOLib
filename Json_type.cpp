@@ -370,9 +370,9 @@ std::pair<String, Value>
 JsonString Object::Serialize() const
 {
     std::string ret;
-    for(auto it = obj.cbegin(); it != obj.cend(); ++it)
+    for(auto it = cbegin(); it != cend(); ++it)
     {
-        if(it != obj.cbegin())
+        if(it != cbegin())
             ret += ",";
         ret += it->first.Serialize() + ":" + it->second.Serialize();
     }
@@ -393,13 +393,13 @@ JsonString Object::Serialize() const
 JsonString Object::doFormat(unsigned nest,
                             const JsonString &padstr) const
 {
-    if(obj.empty())
+    if(empty())
         return Serialize();
 
     std::string ret;
-    for(auto it = obj.cbegin(); it != obj.cend(); ++it)
+    for(auto it = cbegin(); it != cend(); ++it)
     {
-        if(it != obj.cbegin())
+        if(it != cbegin())
             ret += ",\n";
         for(unsigned index = 0; index != nest + 1; ++index)
             ret += padstr;
@@ -468,9 +468,9 @@ Array Array::doParse(const SubString &subStr)
 JsonString Array::Serialize() const
 {
     std::string ret;
-    for (auto it = arr.cbegin(); it != arr.cend(); ++it)
+    for (auto it = cbegin(); it != cend(); ++it)
     {
-        if (it != arr.cbegin())
+        if (it != cbegin())
             ret += ",";
         ret += it->Serialize();
     }
@@ -482,13 +482,13 @@ JsonString Array::Serialize() const
 JsonString Array::doFormat(unsigned nest,
                            const JsonString &padstr) const
 {
-    if(arr.empty())
+    if(empty())
         return Serialize();
 
     std::string ret;
-    for(auto it = arr.cbegin(); it != arr.cend(); ++it)
+    for(auto it = cbegin(); it != cend(); ++it)
     {
-        if(it != arr.cbegin())
+        if(it != cbegin())
             ret += ",\n";
         for(unsigned index = 0; index != nest + 1; ++index)
             ret += padstr;
