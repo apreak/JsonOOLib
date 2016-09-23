@@ -15,7 +15,7 @@ Object m;
 m["pi"] = 3.14;
 m["list"] = {0, 1, 2};
 m["object"] = {{"key1", 1}, {"key2", 2}};
-m.insert{"bool", false};
+m.insert({"bool", false});
 m.erase("list");
 
 // using json like using stl
