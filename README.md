@@ -1,6 +1,5 @@
 # JsonOOLib
-    A Lib to Parse/Generate Json Literal Strings
-    
+A Lib to Parse/Generate Json Literal Strings
 ```cpp
 // using json like using javascript?
 Value lst = {
