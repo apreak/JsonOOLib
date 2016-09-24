@@ -1,8 +1,8 @@
 # JsonOOLib
 An Object-Oriented Lib to Parse/Generate Json Literal Strings
 ```cpp
-// using json like using javascript?
-Value lst = {
+// using json like using javascript
+Value obj = {
   {"pi", 3.14},
   {"list", {0, 1, 2}},
   {"object", {
@@ -10,7 +10,7 @@ Value lst = {
     {"key2", "value2"}
   }};
   
-// using json like using a map?
+// using json like using a map
 Object m;
 m["pi"] = 3.14;
 m["list"] = {0, 1, 2};
@@ -25,7 +25,7 @@ auto it = std::find(scores.cbegin(), scores.cend(), 1);
 
 // or using json like using a vector,
 // and all with Error handling capability,
-// for more infomation, read the manual below or in ReadMe.pdf.
+// for more infomation, read the following manual or refer to ReadMe.pdf.
 
 ```
 
